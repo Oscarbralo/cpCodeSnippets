@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>cpRevString</Title>
+    <Author>Oscar Bralo</Author>
+    <Shortcut>cpRevString</Shortcut>
+    <Description>Reverse a string</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.Text</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>yourString</ID>
+        <ToolTip>Replace with the string to reverse.</ToolTip>
+        <Default>"yourString"</Default>
+      </Literal>
+      <Literal>
+        <ID>newString</ID>
+        <ToolTip>Replace with the name of your variable.</ToolTip>
+        <Default>"newString"</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[StringBuilder $newString$ = new StringBuilder();
+            for (int i = $yourString$.Length - 1; i >= 0; i--)
+            {
+                $newString$.Append($yourString$[i]);
+            }]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>

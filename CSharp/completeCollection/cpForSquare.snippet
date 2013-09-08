@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>cpForSquare</Title>
+    <Author>Oscar Bralo</Author>
+    <Shortcut>cpForSquare</Shortcut>
+    <Description>To go through the square with a couple of for loops</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>yourStringArray</ID>
+        <ToolTip>Replace with your array / Row part.</ToolTip>
+        <Default>"yourStringArray"</Default>
+      </Literal>
+      <Literal>
+        <ID>yourStringArray[i]</ID>
+        <ToolTip>Replace with your array / Column part.</ToolTip>
+        <Default>"yourStringArray[i]"</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[for(int i = 0; i < $yourStringArray$.Length; i++)
+      {
+        for(int j = 0; j < $yourStringArray[i]$.Length; j++)
+        {
+          
+        }
+      }]]>
+    </Code>
+  </Snippet>
+  <Imports>
+    <Import>
+      
+    </Import>
+  </Imports>
+</CodeSnippet>

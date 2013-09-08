@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippet Format="1.0.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>cpRevStringSwapping</Title>
+    <Author>Oscar Bralo</Author>
+    <Shortcut>cpRevStringSwapping</Shortcut>
+    <Description>Reverse a string swapping elements</Description>
+    <SnippetTypes>
+      <SnippetType>SurroundsWith</SnippetType>
+      <SnippetType>Expansion</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Imports>
+      <Import>
+        <Namespace>System.Text</Namespace>
+      </Import>
+    </Imports>
+    <Declarations>
+      <Literal>
+        <ID>yourString</ID>
+        <ToolTip>Replace with the string to reverse.</ToolTip>
+        <Default>"yourString"</Default>
+      </Literal>
+      <Literal>
+        <ID>newString</ID>
+        <ToolTip>Replace with the name of your variable.</ToolTip>
+        <Default>"newString"</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="CSharp">
+      <![CDATA[StringBuilder $newString$ = new StringBuilder($yourString$);
+            int j = $yourString$.Length - 1;
+            for (int i = 0; i < $yourString$.Length / 2; i++)
+            {
+                string temp = $newString$[i].ToString();
+                $newString$[i] = $newString$[j];
+                $newString$.Insert(j, temp);
+                $newString$.Remove(j + 1, 1);
+                j--;
+            }]]>
+    </Code>
+  </Snippet>
+</CodeSnippet>
